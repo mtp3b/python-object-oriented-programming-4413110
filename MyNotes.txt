@@ -1,0 +1,40 @@
+Object-Oriented Programming
+ - python does not require you to use objects and classes
+ - complex programs are hard to keep organized
+ - object-oriented programming organizes and structures code
+    1. groups together data and behavior into one place (reduces bugs and ensures only that the parts of the program that need access to that data have it)
+    2. promotes modularization of programs (if parts of a program needs to be updated, it will present minimal disturbance to other parts of the code)
+    3. isolates different parts of the program from each other (if a problem occurs in one part of the program, other parts of the program can continue to operate)
+
+
+
+TERMINOLOGY:
+CLASS - a blueprint or template that describes how to create a specific kind of object
+
+METHODS - regular functions that are part of a class
+
+ATTRIUTES - variables that hold data that are part of a class
+
+OBJECT - a specific instance of a class
+
+INHERITANCE - means by which a class can inherit capabilities from one another
+
+COMPOSITION - means of building complex objects out of other objects
+
+
+
+
+CH1 NOTES:
+ - adding ang underscore(_) in front of the attribute name tells other programmers that the attribute is internal to the class only and not for public consumption
+
+ - "hasattr" is a built_in function used to check if an attribute exists
+
+ - properties with double underscores are hidden by the interpreter. other classes will get an error if they try to access that attribute
+
+ - "isinstace" is used to check if a given object is an instance of a particular class
+
+ - "class methods" receive the class itself as the first argument
+    ex. @classmethod
+        def get_book_types(cls):
+          return cls.BOOK_TYPES  #all caps attribute name to indicate that this is a class attribute
+
