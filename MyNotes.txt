@@ -2,9 +2,9 @@ Object-Oriented Programming
  - python does not require you to use objects and classes
  - complex programs are hard to keep organized
  - object-oriented programming organizes and structures code
-    1. groups together data and behavior into one place (reduces bugs and ensures only that the parts of the program that need access to that data have it)
-    2. promotes modularization of programs (if parts of a program needs to be updated, it will present minimal disturbance to other parts of the code)
-    3. isolates different parts of the program from each other (if a problem occurs in one part of the program, other parts of the program can continue to operate)
+     1. groups together data and behavior into one place (reduces bugs and ensures only that the parts of the program that need access to that data have it)
+     2. promotes modularization of programs (if parts of a program needs to be updated, it will present minimal disturbance to other parts of the code)
+     3. isolates different parts of the program from each other (if a problem occurs in one part of the program, other parts of the program can continue to operate)
 
 
 
@@ -37,4 +37,23 @@ CH1 NOTES:
     ex. @classmethod
         def get_book_types(cls):
           return cls.BOOK_TYPES  #all caps attribute name to indicate that this is a class attribute
+
+
+CH2 NOTES:
+
+ - STARTING CH2, JUST COMPARE Start AND Finished CODE!!
+
+ - super().__init__() initializes parent class from the child class
+
+ - abstract base class is a template where other classes inherit from, albeit with some rules:
+     1. consumers should not be able to create instances of the base class itself
+     2. certain methods in the base class have to be implemented in the sub-classes
+
+ - abc module for abstract base class
+
+ - @abstractmethod decorator declares a method as abstract requires a subclass to implement it
+
+ - sub-classes can inherit properties from more than 1 base class
+
+ - if both super-classes are defining the same attribute, the sub-class inherits the attribute of the super-class that is listed first from left to right
 
