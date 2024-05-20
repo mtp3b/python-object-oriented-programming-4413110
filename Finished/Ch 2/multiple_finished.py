@@ -28,5 +28,5 @@ class C(B, A):
 
 # create the class and call showprops()
 c = C()
-print(C.__mro__)
+print(C.__mro__)  #mro means Method Resolution Order
 c.showprops()

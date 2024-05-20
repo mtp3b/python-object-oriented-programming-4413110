@@ -33,11 +33,18 @@ CH1 NOTES:
 
  - "isinstace" is used to check if a given object is an instance of a particular class
 
- - "class methods" receive the class itself as the first argument
-    ex. @classmethod
-        def get_book_types(cls):
-          return cls.BOOK_TYPES  #all caps attribute name to indicate that this is a class attribute
+ - every object is a subclass of the built-in 'object' class
 
+ - class-level methods and attributes are shared at the class level across all instances of that class
+
+ - define "class attributes" outside of any instance attributes. you can use all caps to indicate class-level attributes
+
+ - "class methods" receive the class itself as the first argument
+    ex. @classmethod  #classmethod decorator indicates that the method to be defined is a class method and not an instance method
+        def get_book_types(cls):
+          return cls.BOOK_TYPES
+
+ - "static methods" do not modify the state of either the class or a specific object instance. static methods are not oftenly used
 
 CH2 NOTES:
 
@@ -51,9 +58,10 @@ CH2 NOTES:
 
  - abc module for abstract base class
 
- - @abstractmethod decorator declares a method as abstract requires a subclass to implement it
+ - @abstractmethod decorator declares a method as abstract requires a subclass to override and implement it
 
  - sub-classes can inherit properties from more than 1 base class
 
  - if both super-classes are defining the same attribute, the sub-class inherits the attribute of the super-class that is listed first from left to right
 
+ - by implementing an interface, the class makes a contract/promise to provide a certain kind of behavior or capability
