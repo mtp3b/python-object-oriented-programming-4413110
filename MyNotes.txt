@@ -13,7 +13,7 @@ CLASS - a blueprint or template that describes how to create a specific kind of 
 
 METHODS - regular functions that are part of a class
 
-ATTRIUTES - variables that hold data that are part of a class
+ATTRIBUTES - variables that hold data that are part of a class
 
 OBJECT - a specific instance of a class
 
