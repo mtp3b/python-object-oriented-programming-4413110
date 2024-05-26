@@ -65,3 +65,7 @@ CH2 NOTES:
  - if both super-classes are defining the same attribute, the sub-class inherits the attribute of the super-class that is listed first from left to right
 
  - by implementing an interface, the class makes a contract/promise to provide a certain kind of behavior or capability
+
+ - when using composition, we build objects out of other objects. this model is more of a "has" relationship rather than an "is" relationship like in inheritance
+
+ - 
