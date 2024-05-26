@@ -58,7 +58,7 @@ CH2 NOTES:
 
  - abc module for abstract base class
 
- - @abstractmethod decorator declares a method as abstract requires a subclass to override and implement it
+ - @abstractmethod decorator declares a method as abstract and requires a subclass to override and implement it
 
  - sub-classes can inherit properties from more than 1 base class
 
