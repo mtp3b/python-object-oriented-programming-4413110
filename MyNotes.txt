@@ -68,4 +68,24 @@ CH2 NOTES:
 
  - when using composition, we build objects out of other objects. this model is more of a "has" relationship rather than an "is" relationship like in inheritance
 
- - 
+
+CH3 NOTES:
+ - you can override built-in functions to make them behave the way you want to
+
+ - __str__ function is user-friendly description of the object and usually intended to be displayed to the user
+
+ - __repr__ function is used to generate a more developer-facing string and ideally used to re-create the object in its current state or for debugging
+
+ - python does not do attribute by attribute comparison. it just sees 2 instances as 2 different objects in memory
+
+ - __eq__ is being called when comparing objects for equality
+
+ - the built-in 'sort' function uses the __lt__ operator to sort from lowest to highest
+
+ - https://docs.python.org/3/reference/datamodel.html
+
+ - python gives you complete control over how attributes are accessed
+
+ - __getattr__ gets called when the called attribute is not defined
+
+ - the __call__ method can be used to call the object like a function

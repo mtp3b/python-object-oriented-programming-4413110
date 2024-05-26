@@ -16,12 +16,24 @@ class Asset(ABC):
     def __str__(self):
         pass
 
+    def __lt__(self):
+        pass
+
 
 class Stock(Asset):
     def __init__(self, ticker, price, company):
         super().__init__(price)
         self.company = company
         self.ticker = ticker
+    
+    def __lt__(self, value):
+        if not isinstance(value, Asset):
+            raise ValueError("Can't compare non-Assets")
+
+        return self.price < value.price
+
+    def __str__(self):
+        return f"{self.ticker}: {self.company} -- ${self.price}"
 
 
 class Bond(Asset):
@@ -30,6 +42,15 @@ class Bond(Asset):
         self.description = description
         self.duration = duration
         self.yieldamt = yieldamt
+
+    def __lt__(self, value):
+        if not isinstance(value, Asset):
+            raise ValueError("Can't compare non-Assets")
+
+        return self.yieldamt < value.yieldamt
+    
+    def __str__(self):
+        return f"{self.description}: {self.duration}yr : ${self.price} : {self.yieldamt}%"
 
 
 # ~~~~~~~~~ TEST CODE ~~~~~~~~~
