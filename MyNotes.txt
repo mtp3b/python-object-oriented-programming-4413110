@@ -89,3 +89,27 @@ CH3 NOTES:
  - __getattr__ gets called when the called attribute is not defined
 
  - the __call__ method can be used to call the object like a function
+
+
+CH4 NOTES:
+ - 'dataclass' (use @dataclass decorator) is a feature introduced in python 3.7 that automates defining of the __init__ function.
+
+ - pass attributes for each instance, in the same order as parameters are declared in the class.
+
+ - 'dataclass' also automatically implements __repr__ and __eq__ magic methods.
+
+ - you can still define regular methods even while using 'dataclass'
+
+ - you can add more attributes (which combine your initial attributes as values) to your dataclass by using the __post_init__ override.
+
+ - __post_init__ will initialize after the automated __init__ function finishes initializing.
+
+ - dataclasses provide the ability to define default values for attributes.
+
+ - you can define default values as you are declaring the attributes or by using the field function.
+
+ - if you are defining attributes with default values and attributes without default values, the attributes without default values must be declared first.
+
+ - @dataclass(frozen=True) makes your attributes immutable.
+
+ - you can set the immutable values as you are creating an instance, but after that instance is finished initializing, the values cannot be modified.
